@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4106C69221B27F30006BE60D /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4106C69121B27F30006BE60D /* RegisterViewController.xib */; };
 		413D849F21B0AF79002E6DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D849E21B0AF79002E6DC9 /* AppDelegate.swift */; };
 		413D84A121B0AF79002E6DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D84A021B0AF79002E6DC9 /* ViewController.swift */; };
-		413D84A421B0AF79002E6DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413D84A221B0AF79002E6DC9 /* Main.storyboard */; };
 		413D84A621B0AF79002E6DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413D84A521B0AF79002E6DC9 /* Assets.xcassets */; };
 		413D84A921B0AF79002E6DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413D84A721B0AF79002E6DC9 /* LaunchScreen.storyboard */; };
 		413D84B421B0AF79002E6DC9 /* RasataurantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D84B321B0AF79002E6DC9 /* RasataurantsTests.swift */; };
 		413D84BF21B0AF7A002E6DC9 /* RasataurantsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D84BE21B0AF7A002E6DC9 /* RasataurantsUITests.swift */; };
+		415246AA21B1B8A600FA651B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415246A921B1B8A600FA651B /* NavigationController.swift */; };
+		415246AC21B1B9C700FA651B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415246AB21B1B9C700FA651B /* LoginViewController.swift */; };
+		415246AF21B1BA5000FA651B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415246AE21B1BA5000FA651B /* LoginViewController.xib */; };
+		415246B121B1C26700FA651B /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415246B021B1C26700FA651B /* UIView+Additions.swift */; };
+		415246B321B1C41000FA651B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415246B221B1C41000FA651B /* RegisterViewController.swift */; };
+		415246B521B1C6C000FA651B /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415246B421B1C6C000FA651B /* ChannelsViewController.swift */; };
+		41B2FE7721B314B8005A0453 /* RegisterValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B2FE7621B314B8005A0453 /* RegisterValidator.swift */; };
+		41D6DB2D21B0B83000A2DFAA /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6DB2C21B0B83000A2DFAA /* AppController.swift */; };
+		41D6DB3021B0BB1000A2DFAA /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6DB2F21B0BB1000A2DFAA /* UIColor+Additions.swift */; };
+		41D6DB3221B0BE2700A2DFAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41D6DB3121B0BE2700A2DFAA /* GoogleService-Info.plist */; };
+		76C2F7A516D0E5D687EFD832 /* Pods_Rasataurants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD780A6444CC1415AB04220 /* Pods_Rasataurants.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		174870F8EFD399A87D8EEF2D /* Pods-Rasataurants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rasataurants.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rasataurants/Pods-Rasataurants.release.xcconfig"; sourceTree = "<group>"; };
+		4106C69121B27F30006BE60D /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		413D849B21B0AF79002E6DC9 /* Rasataurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rasataurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413D849E21B0AF79002E6DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413D84A021B0AF79002E6DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		413D84A321B0AF79002E6DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		413D84A521B0AF79002E6DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		413D84A821B0AF79002E6DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		413D84AA21B0AF79002E6DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +59,18 @@
 		413D84BA21B0AF7A002E6DC9 /* RasataurantsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RasataurantsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		413D84BE21B0AF7A002E6DC9 /* RasataurantsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RasataurantsUITests.swift; sourceTree = "<group>"; };
 		413D84C021B0AF7A002E6DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		415246A921B1B8A600FA651B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		415246AB21B1B9C700FA651B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		415246AE21B1BA5000FA651B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		415246B021B1C26700FA651B /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
+		415246B221B1C41000FA651B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		415246B421B1C6C000FA651B /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
+		41B2FE7621B314B8005A0453 /* RegisterValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidator.swift; sourceTree = "<group>"; };
+		41D6DB2C21B0B83000A2DFAA /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		41D6DB2F21B0BB1000A2DFAA /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		41D6DB3121B0BE2700A2DFAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FD780A6444CC1415AB04220 /* Pods_Rasataurants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rasataurants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5AED5E9685924ED58BF3CEE /* Pods-Rasataurants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rasataurants.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rasataurants/Pods-Rasataurants.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C2F7A516D0E5D687EFD832 /* Pods_Rasataurants.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012DE88B776595125CEB721C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5AED5E9685924ED58BF3CEE /* Pods-Rasataurants.debug.xcconfig */,
+				174870F8EFD399A87D8EEF2D /* Pods-Rasataurants.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		413D849221B0AF79002E6DC9 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +115,8 @@
 				413D84B221B0AF79002E6DC9 /* RasataurantsTests */,
 				413D84BD21B0AF7A002E6DC9 /* RasataurantsUITests */,
 				413D849C21B0AF79002E6DC9 /* Products */,
+				012DE88B776595125CEB721C /* Pods */,
+				6E35204AA33FC1FBB36716BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +133,14 @@
 		413D849D21B0AF79002E6DC9 /* Rasataurants */ = {
 			isa = PBXGroup;
 			children = (
-				413D849E21B0AF79002E6DC9 /* AppDelegate.swift */,
+				41B2FE7521B314A5005A0453 /* Validators */,
+				415246B621B1CAC600FA651B /* Views */,
+				415246AD21B1BA3C00FA651B /* Layouts */,
+				415246A821B1B53300FA651B /* View Controllers */,
+				41D6DB2E21B0BAFF00A2DFAA /* Extensions */,
+				41D6DB2B21B0B82000A2DFAA /* Controllers */,
+				41D6DB2A21B0B42000A2DFAA /* Supporting Files */,
 				413D84A021B0AF79002E6DC9 /* ViewController.swift */,
-				413D84A221B0AF79002E6DC9 /* Main.storyboard */,
-				413D84A521B0AF79002E6DC9 /* Assets.xcassets */,
-				413D84A721B0AF79002E6DC9 /* LaunchScreen.storyboard */,
-				413D84AA21B0AF79002E6DC9 /* Info.plist */,
 			);
 			path = Rasataurants;
 			sourceTree = "<group>";
@@ -125,6 +163,78 @@
 			path = RasataurantsUITests;
 			sourceTree = "<group>";
 		};
+		415246A821B1B53300FA651B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				415246A921B1B8A600FA651B /* NavigationController.swift */,
+				415246AB21B1B9C700FA651B /* LoginViewController.swift */,
+				415246B221B1C41000FA651B /* RegisterViewController.swift */,
+				415246B421B1C6C000FA651B /* ChannelsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		415246AD21B1BA3C00FA651B /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				413D84A721B0AF79002E6DC9 /* LaunchScreen.storyboard */,
+				415246AE21B1BA5000FA651B /* LoginViewController.xib */,
+				4106C69121B27F30006BE60D /* RegisterViewController.xib */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		415246B621B1CAC600FA651B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		41B2FE7521B314A5005A0453 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				41B2FE7621B314B8005A0453 /* RegisterValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		41D6DB2A21B0B42000A2DFAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41D6DB3121B0BE2700A2DFAA /* GoogleService-Info.plist */,
+				413D84AA21B0AF79002E6DC9 /* Info.plist */,
+				413D84A521B0AF79002E6DC9 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41D6DB2B21B0B82000A2DFAA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				413D849E21B0AF79002E6DC9 /* AppDelegate.swift */,
+				41D6DB2C21B0B83000A2DFAA /* AppController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		41D6DB2E21B0BAFF00A2DFAA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				41D6DB2F21B0BB1000A2DFAA /* UIColor+Additions.swift */,
+				415246B021B1C26700FA651B /* UIView+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E35204AA33FC1FBB36716BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FD780A6444CC1415AB04220 /* Pods_Rasataurants.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 413D84C321B0AF7A002E6DC9 /* Build configuration list for PBXNativeTarget "Rasataurants" */;
 			buildPhases = (
+				54A429E9DBA1C697CBD2593D /* [CP] Check Pods Manifest.lock */,
 				413D849721B0AF79002E6DC9 /* Sources */,
 				413D849821B0AF79002E6DC9 /* Frameworks */,
 				413D849921B0AF79002E6DC9 /* Resources */,
+				D55033595BB839B9B78CAEC0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,9 +341,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415246AF21B1BA5000FA651B /* LoginViewController.xib in Resources */,
+				4106C69221B27F30006BE60D /* RegisterViewController.xib in Resources */,
 				413D84A921B0AF79002E6DC9 /* LaunchScreen.storyboard in Resources */,
+				41D6DB3221B0BE2700A2DFAA /* GoogleService-Info.plist in Resources */,
 				413D84A621B0AF79002E6DC9 /* Assets.xcassets in Resources */,
-				413D84A421B0AF79002E6DC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +365,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54A429E9DBA1C697CBD2593D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rasataurants-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D55033595BB839B9B78CAEC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rasataurants/Pods-Rasataurants-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rasataurants/Pods-Rasataurants-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		413D849721B0AF79002E6DC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415246B521B1C6C000FA651B /* ChannelsViewController.swift in Sources */,
+				415246AC21B1B9C700FA651B /* LoginViewController.swift in Sources */,
 				413D84A121B0AF79002E6DC9 /* ViewController.swift in Sources */,
+				41D6DB3021B0BB1000A2DFAA /* UIColor+Additions.swift in Sources */,
+				415246B321B1C41000FA651B /* RegisterViewController.swift in Sources */,
+				415246AA21B1B8A600FA651B /* NavigationController.swift in Sources */,
 				413D849F21B0AF79002E6DC9 /* AppDelegate.swift in Sources */,
+				41B2FE7721B314B8005A0453 /* RegisterValidator.swift in Sources */,
+				415246B121B1C26700FA651B /* UIView+Additions.swift in Sources */,
+				41D6DB2D21B0B83000A2DFAA /* AppController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +460,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		413D84A221B0AF79002E6DC9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				413D84A321B0AF79002E6DC9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		413D84A721B0AF79002E6DC9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,11 +589,12 @@
 		};
 		413D84C421B0AF7A002E6DC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5AED5E9685924ED58BF3CEE /* Pods-Rasataurants.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 859SRQN4LP;
-				INFOPLIST_FILE = Rasataurants/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Rasataurants/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,11 +608,12 @@
 		};
 		413D84C521B0AF7A002E6DC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 174870F8EFD399A87D8EEF2D /* Pods-Rasataurants.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 859SRQN4LP;
-				INFOPLIST_FILE = Rasataurants/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Rasataurants/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
