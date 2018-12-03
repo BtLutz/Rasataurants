@@ -15,4 +15,10 @@ extension UIView {
         
         layer.mask = maskLayer
     }
+    
+    func animateAlphaChange(to alpha: CGFloat) {
+        UIView.animate(withDuration: 0.5) {
+            self.alpha = alpha
+        }
+    }
 }

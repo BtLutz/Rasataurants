@@ -15,6 +15,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var registerStackView: UIStackView!
+    @IBOutlet weak var invalidEmailLabel: UILabel!
+    @IBOutlet weak var validEmailLabel: UILabel!
+    @IBOutlet weak var invalidPasswordLabel: UILabel!
+    @IBOutlet weak var validPasswordLabel: UILabel!
     
     // MARK: - Properties
     var givenEmail: String?
@@ -24,6 +29,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     init(withUsername username: String?, andPassword password: String?) {
         self.givenEmail = username
         self.givenPassword = password
+        
         super.init(nibName: "RegisterViewController", bundle: nil)
     }
     
@@ -37,6 +43,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.text = givenPassword
         self.emailTextField.addTarget(self, action: #selector(emailTextFieldChanged(_:)), for: .editingDidEnd)
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.emailTextField.becomeFirstResponder()
+    }
     
     // MARK: - IBActions
     @IBAction func backButtonPressed(_ sender: UIButton) {
@@ -45,7 +57,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        print("register button pressed")
         guard let emailAddress = emailTextField.text,
             RegisterValidator.isValidEmail(emailAddress) else {
                 // TODO: Turn this into an enumeration
@@ -57,24 +68,36 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 showMissingFieldAlert("Did you make sure to put in a password?")
                 return
         }
-        guard let confirmedPassword = passwordTextField.text,
-            confirmedPassword == password else {
-            showMissingFieldAlert("Does your confirmed password match your password?")
+        guard let confirmedPassword = passwordTextField.text else {
+            showMissingFieldAlert("I don't think your password was confirmed.")
+            return
+        }
+        if confirmedPassword != password {
+            showMissingFieldAlert("I didn't find that the passwords you entered matched.")
             return
         }
 //        AppSettings.displayName = name
-        Auth.auth().createUser(withEmail: emailAddress, password: password, completion: nil)
+//        Auth.auth().createUser(withEmail: emailAddress, password: password, completion: nil)
     }
     
     @IBAction func emailTextFieldChanged(_ sender: UITextField) {
-        guard let emailAddress = emailTextField.text else {
+        guard let emailAddress = sender.text else {
             return
         }
-        if !RegisterValidator.isValidEmail(emailAddress) {
-            emailTextField.backgroundColor = UIColor(red: 255, green: 25, blue: 25, alpha: 0.3)
-        } else {
-            emailTextField.backgroundColor = nil
+        
+        let isValidEmail = RegisterValidator.isValidEmail(emailAddress)
+        
+        hideOrShowValidationLabels(forResult: isValidEmail, invalidLabel: self.invalidEmailLabel, validLabel: self.validEmailLabel)
+    }
+    
+    @IBAction func passwordTextFieldChanged(_ sender: UITextField) {
+        guard let password = sender.text else {
+            return
         }
+        
+        let isValidPassword = RegisterValidator.isValidPassword(password)
+        
+        hideOrShowValidationLabels(forResult: isValidPassword, invalidLabel: self.invalidPasswordLabel, validLabel: self.validPasswordLabel)
     }
     
     // MARK: - Helper methods
@@ -82,6 +105,21 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         emailTextField.text = nil
         passwordTextField.text = nil
         confirmPasswordTextField.text = nil
+    }
+    
+    private func hideOrShowValidationLabels(forResult isValid: Bool, invalidLabel: UILabel, validLabel: UILabel) {
+        if isValid && validLabel.alpha != 1 {
+            animateAlphaChanges(toHide: invalidLabel, toShow: validLabel)
+        } else if invalidLabel.alpha != 1 {
+            animateAlphaChanges(toHide: validLabel, toShow: invalidLabel)
+        }
+    }
+    
+    private func animateAlphaChanges(toHide x: UILabel, toShow y: UILabel) {
+        if x.alpha == 1 {
+            x.animateAlphaChange(to: 0)
+        }
+        y.animateAlphaChange(to: 1)
     }
     
     private func showMissingFieldAlert(_ message: String) {

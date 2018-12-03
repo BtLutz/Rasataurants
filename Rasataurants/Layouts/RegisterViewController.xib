@@ -14,7 +14,12 @@
             <connections>
                 <outlet property="confirmPasswordTextField" destination="W3j-Tx-gu1" id="0cQ-To-1Rw"/>
                 <outlet property="emailTextField" destination="ZyZ-Yh-Baz" id="qV3-Ia-fDb"/>
+                <outlet property="invalidEmailLabel" destination="YZx-lU-WD7" id="vZe-KM-28g"/>
+                <outlet property="invalidPasswordLabel" destination="rby-Ub-tw4" id="46x-uU-Qs0"/>
                 <outlet property="passwordTextField" destination="VkI-3D-W4T" id="j05-XV-65J"/>
+                <outlet property="registerStackView" destination="KSJ-xr-kgs" id="tMb-Ci-9yL"/>
+                <outlet property="validEmailLabel" destination="hUH-31-7Ln" id="AJ6-qM-PXb"/>
+                <outlet property="validPasswordLabel" destination="iB0-Of-YRZ" id="81i-9g-cid"/>
                 <outlet property="view" destination="iN0-l3-epB" id="4Y6-j9-QAe"/>
             </connections>
         </placeholder>
@@ -23,10 +28,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KSJ-xr-kgs">
-                    <rect key="frame" x="59.5" y="219" width="256" height="229.5"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KSJ-xr-kgs" userLabel="Register Stack View">
+                    <rect key="frame" x="59.5" y="148" width="256" height="434"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P4-ii-MWp">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P4-ii-MWp" userLabel="Email Label">
                             <rect key="frame" x="0.0" y="0.0" width="256" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -41,32 +46,91 @@
                                 <action selector="emailTextFieldChanged:" destination="-1" eventType="editingDidEnd" id="atE-sy-aER"/>
                             </connections>
                         </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1v-B0-GxK" userLabel="Email Validation Label">
+                            <rect key="frame" x="0.0" y="66.5" width="256" height="60.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid email address :(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZx-lU-WD7" userLabel="Invalid Email Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="60.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valid email address :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-31-7Ln" userLabel="Valid Email Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="60.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.40784313729999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="hUH-31-7Ln" secondAttribute="trailing" id="2gs-aq-YZ2"/>
+                                <constraint firstAttribute="bottom" secondItem="hUH-31-7Ln" secondAttribute="bottom" id="4am-ub-O40"/>
+                                <constraint firstItem="YZx-lU-WD7" firstAttribute="leading" secondItem="B1v-B0-GxK" secondAttribute="leading" id="BNh-bd-WIp"/>
+                                <constraint firstItem="hUH-31-7Ln" firstAttribute="top" secondItem="B1v-B0-GxK" secondAttribute="top" id="PIv-cm-Zxo"/>
+                                <constraint firstItem="hUH-31-7Ln" firstAttribute="leading" secondItem="B1v-B0-GxK" secondAttribute="leading" id="RcB-Wm-zWX"/>
+                                <constraint firstAttribute="bottom" secondItem="YZx-lU-WD7" secondAttribute="bottom" id="rHz-fd-gvk"/>
+                                <constraint firstAttribute="trailing" secondItem="YZx-lU-WD7" secondAttribute="trailing" id="ulL-UI-Rgh"/>
+                                <constraint firstItem="YZx-lU-WD7" firstAttribute="top" secondItem="B1v-B0-GxK" secondAttribute="top" id="vKx-QH-EuS"/>
+                            </constraints>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmb-dF-bN9">
-                            <rect key="frame" x="0.0" y="66.5" width="256" height="20.5"/>
+                            <rect key="frame" x="0.0" y="135" width="256" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VkI-3D-W4T">
-                            <rect key="frame" x="0.0" y="95" width="256" height="30"/>
+                            <rect key="frame" x="0.0" y="163.5" width="256" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <textInputTraits key="textInputTraits" textContentType="password"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            <connections>
+                                <action selector="passwordTextFieldChanged:" destination="-1" eventType="editingDidEnd" id="5c3-so-88e"/>
+                            </connections>
                         </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9z-mX-FYR" userLabel="Password Validation Label">
+                            <rect key="frame" x="0.0" y="201.5" width="256" height="128"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Password :(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rby-Ub-tw4" userLabel="Invalid Password Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="128"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valid Password :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iB0-Of-YRZ" userLabel="Valid Password Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="128"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.40784313729999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="iB0-Of-YRZ" secondAttribute="bottom" id="7y8-Wa-tlA"/>
+                                <constraint firstAttribute="trailing" secondItem="iB0-Of-YRZ" secondAttribute="trailing" id="9dz-gc-JFX"/>
+                                <constraint firstItem="iB0-Of-YRZ" firstAttribute="top" secondItem="X9z-mX-FYR" secondAttribute="top" id="C9n-b4-Y60"/>
+                                <constraint firstAttribute="trailing" secondItem="rby-Ub-tw4" secondAttribute="trailing" id="Ubr-Iu-RhC"/>
+                                <constraint firstItem="iB0-Of-YRZ" firstAttribute="leading" secondItem="X9z-mX-FYR" secondAttribute="leading" id="W71-ky-O61"/>
+                                <constraint firstItem="rby-Ub-tw4" firstAttribute="leading" secondItem="X9z-mX-FYR" secondAttribute="leading" id="eiW-42-o3U"/>
+                                <constraint firstAttribute="bottom" secondItem="rby-Ub-tw4" secondAttribute="bottom" id="lua-6O-LHA"/>
+                                <constraint firstItem="rby-Ub-tw4" firstAttribute="top" secondItem="X9z-mX-FYR" secondAttribute="top" id="paD-gw-sEu"/>
+                            </constraints>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrL-gv-c0A">
-                            <rect key="frame" x="0.0" y="133" width="256" height="20.5"/>
+                            <rect key="frame" x="0.0" y="337.5" width="256" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3j-Tx-gu1">
-                            <rect key="frame" x="0.0" y="161.5" width="256" height="30"/>
+                            <rect key="frame" x="0.0" y="366" width="256" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wSg-60-zTG">
-                            <rect key="frame" x="0.0" y="199.5" width="256" height="30"/>
+                            <rect key="frame" x="0.0" y="404" width="256" height="30"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLi-jf-Csx">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
@@ -96,7 +160,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="KSJ-xr-kgs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="o59-9c-jRN"/>
+                <constraint firstItem="KSJ-xr-kgs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="128" id="Rbh-rS-Tl4"/>
                 <constraint firstItem="KSJ-xr-kgs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zti-w2-Tpo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
